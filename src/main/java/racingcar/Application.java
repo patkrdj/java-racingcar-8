@@ -37,5 +37,19 @@ public class Application {
             }
         }
 
+        // 우승자 출력하기
+        List<String> winners = new ArrayList<>();
+        int winnerDistance = 0;
+        for (int i = 0; i < movingDistances.size(); i++) {
+            if (movingDistances.get(i) > winnerDistance) {
+                winnerDistance = movingDistances.get(i);
+                winners.clear();
+                winners.add(racingCars.get(i));
+            }
+            else if (movingDistances.get(i) == winnerDistance) {
+                winners.add(racingCars.get(i));
+            }
+        }
+        System.out.println("최종 우승자: " + String.join(", ", winners));
     }
 }
