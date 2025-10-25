@@ -1,6 +1,8 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
+import camp.nextstep.edu.missionutils.Randoms;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
@@ -21,6 +23,18 @@ public class Application {
             tryCount = Integer.parseInt(Console.readLine().trim());
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("정수 값을 입력해야 합니다.");
+        }
+
+
+        // 레이싱 차수 별 실행
+        List<Integer> movingDistances = new ArrayList<>(racingCars.size());
+        for (int i = 0; i < racingCars.size(); i++) movingDistances.add(0);
+
+        for (int i = 0; i < tryCount; i++) {
+            for (int j = 0; j < racingCars.size(); j++) {
+                if (Randoms.pickNumberInRange(0, 9) >= 4)
+                    movingDistances.set(j, movingDistances.get(j) + 1);
+            }
         }
 
     }
