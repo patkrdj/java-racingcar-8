@@ -29,12 +29,18 @@ public class Application {
         // 레이싱 차수 별 실행
         List<Integer> movingDistances = new ArrayList<>(racingCars.size());
         for (int i = 0; i < racingCars.size(); i++) movingDistances.add(0);
+        System.out.println("\n실행 결과");
 
         for (int i = 0; i < tryCount; i++) {
             for (int j = 0; j < racingCars.size(); j++) {
                 if (Randoms.pickNumberInRange(0, 9) >= 4)
                     movingDistances.set(j, movingDistances.get(j) + 1);
             }
+
+            for (int j = 0; j < racingCars.size(); j++) {
+                System.out.println(racingCars.get(j) + " : " + "-".repeat(movingDistances.get(j)));
+            }
+            System.out.println();
         }
 
         // 우승자 출력하기
