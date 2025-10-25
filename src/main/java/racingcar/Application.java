@@ -2,6 +2,7 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
 import camp.nextstep.edu.missionutils.Randoms;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,6 @@ public class Application {
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("정수 값을 입력해야 합니다.");
         }
-
 
         // 레이싱 차수 별 실행
         List<Integer> movingDistances = new ArrayList<>(racingCars.size());
@@ -51,8 +51,7 @@ public class Application {
                 winnerDistance = movingDistances.get(i);
                 winners.clear();
                 winners.add(racingCars.get(i));
-            }
-            else if (movingDistances.get(i) == winnerDistance) {
+            } else if (movingDistances.get(i) == winnerDistance) {
                 winners.add(racingCars.get(i));
             }
         }
