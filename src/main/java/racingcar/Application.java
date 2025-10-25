@@ -14,5 +14,14 @@ public class Application {
                 throw new IllegalArgumentException("자동차 이름은 5자 이하여야 합니다.");
         }
 
+        // 시도 횟수 입력받기
+        System.out.println("시도할 횟수는 몇 회인가요?");
+        int tryCount;
+        try {
+            tryCount = Integer.parseInt(Console.readLine().trim());
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("정수 값을 입력해야 합니다.");
+        }
+
     }
 }
