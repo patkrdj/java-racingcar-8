@@ -39,4 +39,8 @@ public class RacingGame {
 
         return winners;
     }
+
+    public List<RacingCar> getRacingCars() {
+        return racingCars;
+    }
 }
