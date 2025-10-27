@@ -1,13 +1,9 @@
 package racingcar.Controller;
 
-import camp.nextstep.edu.missionutils.Console;
-import camp.nextstep.edu.missionutils.Randoms;
-import racingcar.Model.RacingCar;
 import racingcar.Model.RacingGame;
 import racingcar.View.InputView;
 import racingcar.View.OutputView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RacingController {
