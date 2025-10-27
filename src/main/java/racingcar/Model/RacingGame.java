@@ -31,8 +31,7 @@ public class RacingGame {
                 winnerDistance = racingCar.getMovingDistance();
                 winners.clear();
                 winners.add(racingCar.getCarName());
-            }
-            else if (racingCar.getMovingDistance() == winnerDistance) {
+            } else if (racingCar.getMovingDistance() == winnerDistance) {
                 winners.add(racingCar.getCarName());
             }
         }
