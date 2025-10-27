@@ -15,6 +15,7 @@ public class RacingController {
         int tryCount = inputView.readTryCount();
 
         RacingGame racingGame = new RacingGame(racingCarNames);
+        outputView.printStartingResult();
         for (int i = 0; i < tryCount; i++) {
             racingGame.playRound();
             outputView.printRoundResult(racingGame.getRacingCars());
