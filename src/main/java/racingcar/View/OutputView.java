@@ -11,7 +11,7 @@ public class OutputView {
 
     public void printRoundResult(List<RacingCar> racingCars) {
         for (RacingCar racingCar : racingCars) {
-            System.out.println(racingCar.getCarName() + " : " + "_".repeat(racingCar.getMovingDistance()));
+            System.out.println(racingCar.getCarName() + " : " + "-".repeat(racingCar.getMovingDistance()));
         }
         System.out.println();
     }
