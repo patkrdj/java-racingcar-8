@@ -10,17 +10,17 @@ public class InputView {
 
     public List<String> readCarNames() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
-        String racingCarsString = Console.readLine().trim();
+        String racingCarsString = Console.readLine();
         List<String> racingCars = List.of(racingCarsString.split(","));
         Set<String> set = new HashSet<>();
         for (String racingCar : racingCars) {
-            if (!set.add(racingCar)) {
+            if (!set.add(racingCar))
                 throw new IllegalArgumentException("자동차 이름이 중복되었습니다.");
-            }
-        }
-        for (String racingCar : racingCars) {
-            if (racingCar.length() > 5)
+            else if (racingCar.length() > 5)
                 throw new IllegalArgumentException("자동차 이름은 5자 이하여야 합니다.");
+            else if (racingCar.isEmpty())
+                throw new IllegalArgumentException("자동차 이름은 공백이 아니여야 합니다.");
+
         }
         return racingCars;
     }
