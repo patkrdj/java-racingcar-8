@@ -25,6 +25,7 @@ public class InputView {
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("정수 값을 입력해야 합니다.");
         }
+        if (tryCount < 1) throw new IllegalArgumentException("시도 횟수는 양수 값이 되어야 합니다.");
         return tryCount;
     }
 }
